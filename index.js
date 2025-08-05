@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto WhatsApp Message</title>
+</head>
+<body>
+  <h1>Send WhatsApp Message</h1>
+
+  <button onclick="sendMessage()">Send Message</button>
+
+  <script>
+    function sendMessage() {
+      // WhatsApp Number (International format without + sign)
+      const phoneNumber = "94773913394";  // ඔබගේ නම්බරය මෙහි යොදන්න
+
+      // Message to send
+      const message = "hi";
+
+      // Encode the message
+      const encodedMessage = encodeURIComponent(message);
+
+      // WhatsApp URL
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      // Redirect to WhatsApp
+      window.location.href = whatsappURL;
+    }
+  </script>
+</body>
+</html>
